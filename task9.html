@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>fade toggle</title>
+</head>
+<style>
+     .content {
+            width: 300px;
+            height: 100px;
+            background-color: lightblue;
+            text-align: center;
+            line-height: 100px;
+            margin-top: 10px;
+            display: none;
+     }
+     #toggleButton
+     {
+        margin-top: 10px;
+            padding: 8px 16px;
+            font-size: 16px;
+            cursor: pointer;
+     }
+</style>
+<body>
+    <button id="toggleButton">Toggle Content</button>
+    <div class="content">Welcome to JQuery</div>
+<script>
+    $(document).ready(function(){
+        $("#toggleButton").click(function(){
+            $(".content").fadeToggle(500);
+        });
+    });
+</script>
+</body>
+</html>
