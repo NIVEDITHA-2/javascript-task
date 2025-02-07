@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<style>
+    p
+    {
+        font-weight: bold;
+        color:black;
+        margin-left:100px;
+        margin-top:100px;
+    
+    }
+</style>
+<body>
+<p>Hover the mouse pointer over this paragraph.</p>
+<script>
+    $(document).ready(function(){
+      $("p").hover(function(){
+        $(this).css("background-color", "purple");
+        }, function(){
+        $(this).css("background-color", "blue");
+      });
+    });
+    </script>
+</body>
+</html>
