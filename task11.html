@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>Slide Up & Down Animation</title>
+    <style>
+        .content {
+            width: 300px;
+            height: 100px;
+            background-color: lightblue;
+            text-align: center;
+            line-height: 100px;
+            margin-top: 10px;
+            overflow: hidden;
+            display: none; /* Initially hidden */
+        }
+        #animateButton {
+            margin-top: 10px;
+            padding: 8px 16px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="animateButton">Slide Up/Down</button>
+    <div class="content">Hello, I am a div!</div>
+
+    <script>
+        $(document).ready(function(){
+            $("#animateButton").click(function(){
+                $(".content").stop().animate({
+                    height: "toggle",
+                    opacity: "toggle"
+                }, 600); 
+            });
+        });
+    </script>
+
+</body>
+</html>
