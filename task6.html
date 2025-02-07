@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<style>
+    .content
+    {
+        font-size: 20px;
+        color:blue;
+        text-align: center;
+        background-color: aqua;
+        width:300px;
+        height:100px;
+        margin-left: 100px;
+        
+    }
+</style>
+<body>
+    <button id="toggleButton">button toggle</button>
+    <div class="content">click here to hide and show</div>
+    
+    <script>
+        $(document).ready(function(){
+            $("#toggleButton").click(function(){
+                $(".content").fadeToggle();
+            });
+        });
+    </script>
+
+</body>
+</html>
+
+
+
